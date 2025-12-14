@@ -224,7 +224,7 @@ export default function SlotsSetupScreen() {
         {/* Header */}
         <View style={styles.header}>
           <TouchableOpacity
-            style={styles.backButton}
+            style={styles.backButtonTop}
             onPress={() => navigation.goBack()}
             activeOpacity={0.7}
           >
@@ -406,6 +406,13 @@ const styles = StyleSheet.create({
     padding: 24,
     paddingBottom: 40,
   },
+
+  backButtonTop:{
+    backgroundColor: Colors.card,
+    borderWidth: 1,
+    borderColor: Colors.border,
+    marginTop:-60
+  },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -415,15 +422,17 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   title: {
-    fontSize: 28,
+    fontSize: 24,
     fontWeight: '700',
     color: Colors.text,
     marginBottom: 4,
+    textAlign:"center",
   },
   subtitle: {
-    fontSize: 16,
+    fontSize: 14,
     color: Colors.muted,
     lineHeight: 22,
+    textAlign:"center",
   },
   infoBox: {
     flexDirection: 'row',
@@ -614,6 +623,8 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.card,
     borderWidth: 1,
     borderColor: Colors.border,
+    borderRadius:35
+
   },
   backButtonText: {
     fontSize: 16,
@@ -622,6 +633,8 @@ const styles = StyleSheet.create({
   },
   saveButton: {
     backgroundColor: Colors.primary,
+    borderRadius:35,
+    padding:10,
   },
   saveButtonDisabled: {
     opacity: 0.6,
@@ -630,5 +643,8 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 16,
     fontWeight: '600',
+    textAlign:"center"
   },
 });
+
+

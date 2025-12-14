@@ -220,7 +220,7 @@ export default function CoursesSetupScreen() {
             onPress={handleContinue}
             activeOpacity={0.8}
           >
-            <Text style={styles.continueButtonText}>Continue to Time Slots</Text>
+            <Text style={styles.continueButtonText}>Continue</Text>
             <ChevronRight size={20} color="white" />
           </TouchableOpacity>
         )}
@@ -243,15 +243,17 @@ const styles = StyleSheet.create({
     marginBottom: 32,
   },
   title: {
-    fontSize: 28,
+    fontSize: 24,
     fontWeight: '700',
     color: Colors.text,
     marginBottom: 8,
+    textAlign:"center"
   },
   subtitle: {
-    fontSize: 16,
+    fontSize: 14,
     color: Colors.muted,
     lineHeight: 22,
+    textAlign:"center",
   },
   formContainer: {
     backgroundColor: Colors.card,
@@ -274,7 +276,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.background,
     borderWidth: 1,
     borderColor: Colors.border,
-    borderRadius: 12,
+    borderRadius: 35,
     padding: 16,
     fontSize: 16,
     color: Colors.text,
@@ -305,16 +307,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 16,
-    borderRadius: 12,
+    padding: 10,
+    borderRadius: 35,
+    width:"55%",
     gap: 8,
+    alignSelf: 'center',
   },
   addButtonDisabled: {
     opacity: 0.6,
   },
   addButtonText: {
     color: 'white',
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: '600',
   },
   coursesContainer: {
@@ -353,7 +357,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: Colors.card,
     padding: 16,
-    borderRadius: 12,
+    borderRadius: 35,
     marginBottom: 12,
     borderWidth: 1,
     borderColor: Colors.border,
@@ -389,7 +393,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 18,
-    borderRadius: 12,
+    borderRadius: 35,
     gap: 8,
     marginTop: 24,
   },

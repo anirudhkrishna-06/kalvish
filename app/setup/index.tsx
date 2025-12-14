@@ -22,7 +22,7 @@ export default function SetupWelcomeScreen() {
   const steps = [
     {
       title: 'Add Your Courses',
-      description: 'Create all your academic courses with faculty details',
+      description: 'Create all your academic courses',
       icon: <BookOpen size={24} color={Colors.primary} />,
       route: 'CoursesSetup' as keyof RootStackParamList,
       enabled: true,
@@ -30,7 +30,7 @@ export default function SetupWelcomeScreen() {
     },
     {
       title: 'Define Time Slots',
-      description: 'Set your daily schedule with 8 periods and 3 breaks',
+      description: 'Set your daily schedule with breaks',
       icon: <Clock size={24} color={Colors.primary} />,
       route: '/setup/slots',
       enabled: courses.length > 0,
@@ -38,7 +38,7 @@ export default function SetupWelcomeScreen() {
     },
     {
       title: 'Map Weekly Timetable',
-      description: 'Assign courses to each time slot for every day',
+      description: 'Assign courses to each time slot ',
       icon: <Calendar size={24} color={Colors.primary} />,
       route: 'TimetableSetup' as keyof RootStackParamList,
       enabled: slots.length > 0,
@@ -61,7 +61,7 @@ export default function SetupWelcomeScreen() {
       <ScrollView contentContainerStyle={styles.scrollContent}>
         {/* Header */}
         <View style={styles.header}>
-          <Text style={styles.title}>Welcome to TimetableMaster</Text>
+          <Text style={styles.title}>Welcome to Kalvish</Text>
           <Text style={styles.subtitle}>
             Let's set up your perfect academic companion in 3 simple steps
           </Text>
@@ -126,19 +126,6 @@ export default function SetupWelcomeScreen() {
           ))}
         </View>
 
-        {/* Info */}
-        <View style={styles.infoBox}>
-          <CheckCircle size={20} color={Colors.success} />
-          <View style={styles.infoContent}>
-            <Text style={styles.infoTitle}>Setup Progress</Text>
-            <Text style={styles.infoText}>
-              {completedSteps === steps.length
-                ? 'All setup steps completed! You can now use the app.'
-                : `Step ${currentStep} of ${steps.length}. You only need to do this once.`}
-            </Text>
-          </View>
-        </View>
-
         {/* Progress Indicator */}
         <View style={styles.progressContainer}>
           <View style={styles.progressBar}>
@@ -198,14 +185,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 28,
+    fontSize: 26,
     fontWeight: '700',
     color: Colors.text,
     textAlign: 'center',
     marginBottom: 8,
   },
   subtitle: {
-    fontSize: 16,
+    fontSize: 14,
     color: Colors.muted,
     textAlign: 'center',
     lineHeight: 22,
@@ -214,6 +201,8 @@ const styles = StyleSheet.create({
     gap: 16,
     marginBottom: 32,
   },
+
+
   stepCard: {
     backgroundColor: Colors.card,
     borderRadius: 16,
@@ -233,6 +222,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 16,
+    justifyContent: 'center',
   },
   stepIconContainer: {
     position: 'relative',
@@ -258,6 +248,7 @@ const styles = StyleSheet.create({
   },
   stepContent: {
     flex: 1,
+    alignItems: 'center',
   },
   stepTitleRow: {
     flexDirection: 'row',
@@ -266,10 +257,11 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   stepTitle: {
-    fontSize: 18,
+    fontSize: 17,
     fontWeight: '600',
     color: Colors.text,
     flex: 1,
+    textAlign: 'center',
   },
   stepTitleDisabled: {
     color: Colors.muted,
@@ -290,6 +282,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: Colors.muted,
     lineHeight: 20,
+    textAlign: 'center',
   },
   stepDescriptionDisabled: {
     color: Colors.border,
@@ -299,6 +292,7 @@ const styles = StyleSheet.create({
     color: Colors.error,
     marginTop: 4,
     fontStyle: 'italic',
+    textAlign: 'center',
   },
   infoBox: {
     flexDirection: 'row',
