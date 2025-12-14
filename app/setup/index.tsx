@@ -8,6 +8,7 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { CheckCircle, Clock, Calendar, BookOpen } from 'lucide-react-native';
 import { useApp } from '@/contexts/AppContext';
 import { useNavigation } from '@react-navigation/native';
+import { Image } from 'react-native';
 
 
 
@@ -61,7 +62,12 @@ export default function SetupWelcomeScreen() {
       <ScrollView contentContainerStyle={styles.scrollContent}>
         {/* Header */}
         <View style={styles.header}>
-          <Text style={styles.title}>Welcome to Kalvish</Text>
+          <Text style={styles.title}>Welcome to</Text>
+          <Image
+            source={require('../../assets/logo.jpg')}
+            style={styles.logo}
+          />
+          
           <Text style={styles.subtitle}>
             Let's set up your perfect academic companion in 3 simple steps
           </Text>
@@ -180,8 +186,12 @@ const styles = StyleSheet.create({
     padding: 24,
     paddingBottom: 40,
   },
+  logo: {
+    width: 200,
+    height: 200,
+  },
   header: {
-    marginBottom: 40,
+    marginBottom: 10,
     alignItems: 'center',
   },
   title: {
@@ -189,23 +199,23 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: Colors.text,
     textAlign: 'center',
-    marginBottom: 8,
+    marginBottom: 0,
   },
   subtitle: {
     fontSize: 14,
     color: Colors.muted,
     textAlign: 'center',
-    lineHeight: 22,
+    lineHeight: 20,
   },
   stepsContainer: {
-    gap: 16,
+    gap: 10,
     marginBottom: 32,
   },
 
 
   stepCard: {
     backgroundColor: Colors.card,
-    borderRadius: 16,
+    borderRadius: 26,
     padding: 20,
     borderWidth: 1,
     borderColor: Colors.border,
@@ -248,7 +258,7 @@ const styles = StyleSheet.create({
   },
   stepContent: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: 'flex-start',
   },
   stepTitleRow: {
     flexDirection: 'row',
@@ -257,11 +267,11 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   stepTitle: {
-    fontSize: 17,
+    fontSize: 15,
     fontWeight: '600',
     color: Colors.text,
-    flex: 1,
-    textAlign: 'center',
+    flex: 5,
+    textAlign: 'left',
   },
   stepTitleDisabled: {
     color: Colors.muted,
@@ -271,15 +281,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
     paddingVertical: 4,
     borderRadius: 12,
-    marginLeft: 8,
+    marginLeft: 4,
   },
   completedBadgeText: {
     color: 'white',
-    fontSize: 12,
+    fontSize: 8,
     fontWeight: '600',
   },
   stepDescription: {
-    fontSize: 14,
+    fontSize: 12,
     color: Colors.muted,
     lineHeight: 20,
     textAlign: 'center',
@@ -307,13 +317,13 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   infoTitle: {
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: '700',
     color: '#0369A1',
     marginBottom: 4,
   },
   infoText: {
-    fontSize: 14,
+    fontSize: 12,
     color: '#0369A1',
     lineHeight: 20,
   },
@@ -339,12 +349,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   progressText: {
-    fontSize: 14,
+    fontSize: 12,
     color: Colors.muted,
     fontWeight: '500',
   },
   progressPercentage: {
-    fontSize: 14,
+    fontSize: 12,
     color: Colors.primary,
     fontWeight: '700',
   },
@@ -367,7 +377,7 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   statLabel: {
-    fontSize: 12,
+    fontSize: 10,
     color: Colors.muted,
     textTransform: 'uppercase',
     letterSpacing: 0.5,

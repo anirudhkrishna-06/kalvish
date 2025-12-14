@@ -233,9 +233,7 @@ export default function SlotsSetupScreen() {
           
           <View style={styles.headerContent}>
             <Text style={styles.title}>Define Time Slots</Text>
-            <Text style={styles.subtitle}>
-              Set your daily schedule with 8 periods and 3 breaks
-            </Text>
+            
           </View>
         </View>
 
@@ -384,7 +382,6 @@ export default function SlotsSetupScreen() {
             disabled={isSaving}
             activeOpacity={0.8}
           >
-            <Save size={20} color="white" />
             <Text style={styles.saveButtonText}>
               {isSaving ? 'Saving...' : 'Save & Continue'}
             </Text>
@@ -408,9 +405,9 @@ const styles = StyleSheet.create({
   },
 
   backButtonTop:{
-    backgroundColor: Colors.card,
+    backgroundColor: '#fff',
     borderWidth: 1,
-    borderColor: Colors.border,
+    borderColor: '#fff',
     marginTop:-60
   },
   header: {
@@ -427,6 +424,7 @@ const styles = StyleSheet.create({
     color: Colors.text,
     marginBottom: 4,
     textAlign:"center",
+    alignSelf: 'center'
   },
   subtitle: {
     fontSize: 14,
@@ -446,13 +444,13 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   infoTitle: {
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: '700',
     color: '#92400E',
     marginBottom: 4,
   },
   infoText: {
-    fontSize: 14,
+    fontSize: 11,
     color: '#92400E',
     lineHeight: 20,
   },
@@ -460,8 +458,8 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   slotsContainer: {
-    gap: 16,
-    marginBottom: 24,
+    gap: 12,
+    marginBottom: 20,
   },
   slotCard: {
     backgroundColor: Colors.card,
@@ -492,13 +490,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   slotName: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: '600',
     color: Colors.text,
     marginBottom: 2,
   },
   slotType: {
-    fontSize: 14,
+    fontSize: 12,
     color: Colors.muted,
   },
   slotDuration: {
@@ -508,7 +506,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   durationText: {
-    fontSize: 12,
+    fontSize: 10,
     fontWeight: '600',
     color: Colors.text,
   },
@@ -516,17 +514,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     padding: 16,
-    gap: 12,
+    gap: 4,
+    fontSize: 10
   },
   timeInputGroup: {
     flex: 1,
+    fontSize: 10
   },
   timeDisplay: {
     alignItems: 'center',
-    paddingVertical: 8,
+    paddingVertical: 3,
   },
   timeDisplayText: {
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: '500',
     color: Colors.muted,
   },
@@ -577,7 +577,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   summaryLabel: {
-    fontSize: 12,
+    fontSize: 10,
     color: Colors.muted,
     marginBottom: 4,
     textTransform: 'uppercase',
@@ -597,12 +597,12 @@ const styles = StyleSheet.create({
     borderRadius: 12,
   },
   dayRangeLabel: {
-    fontSize: 14,
+    fontSize: 11,
     fontWeight: '600',
     color: Colors.text,
   },
   dayRangeValue: {
-    fontSize: 16,
+    fontSize: 11,
     fontWeight: '700',
     color: Colors.primary,
   },
@@ -627,21 +627,21 @@ const styles = StyleSheet.create({
 
   },
   backButtonText: {
-    fontSize: 16,
+    fontSize: 12,
     fontWeight: '600',
     color: Colors.primary,
   },
   saveButton: {
     backgroundColor: Colors.primary,
     borderRadius:35,
-    padding:10,
+    padding:15,
   },
   saveButtonDisabled: {
     opacity: 0.6,
   },
   saveButtonText: {
     color: 'white',
-    fontSize: 16,
+    fontSize: 12,
     fontWeight: '600',
     textAlign:"center"
   },

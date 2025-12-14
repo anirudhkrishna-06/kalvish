@@ -56,7 +56,7 @@ export default function CoursesSetupScreen() {
 
         currentUnit: '',
         previousClassTopic: '',
-        notes: '',
+        notes: [],
         tasks: []
         });
 
@@ -103,9 +103,6 @@ export default function CoursesSetupScreen() {
         {/* Header */}
         <View style={styles.header}>
           <Text style={styles.title}>Add Your Courses</Text>
-          <Text style={styles.subtitle}>
-            Create all your academic courses. You need at least one to continue.
-          </Text>
         </View>
 
         {/* Course Form */}
@@ -236,11 +233,11 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     flexGrow: 1,
-    padding: 24,
+    padding: 20,
     paddingBottom: 40,
   },
   header: {
-    marginBottom: 32,
+    marginBottom: 20,
   },
   title: {
     fontSize: 24,
@@ -264,10 +261,10 @@ const styles = StyleSheet.create({
     borderColor: Colors.border,
   },
   formGroup: {
-    marginBottom: 20,
+    marginBottom: 10,
   },
   label: {
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: '600',
     color: Colors.text,
     marginBottom: 8,
@@ -278,16 +275,16 @@ const styles = StyleSheet.create({
     borderColor: Colors.border,
     borderRadius: 35,
     padding: 16,
-    fontSize: 16,
+    fontSize: 12,
     color: Colors.text,
   },
   colorScroll: {
     flexDirection: 'row',
-    paddingVertical: 8,
+    paddingVertical: 4,
   },
   colorOption: {
-    width: 40,
-    height: 40,
+    width: 35,
+    height: 35,
     borderRadius: 20,
     marginRight: 12,
     alignItems: 'center',
@@ -333,7 +330,7 @@ const styles = StyleSheet.create({
     color: Colors.text,
   },
   coursesSubtitle: {
-    fontSize: 14,
+    fontSize: 12,
     color: Colors.muted,
     marginTop: 4,
   },
@@ -372,13 +369,13 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   courseName: {
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: '600',
     color: Colors.text,
-    marginBottom: 2,
+    marginBottom: 1,
   },
   courseFaculty: {
-    fontSize: 14,
+    fontSize: 12,
     color: Colors.muted,
     marginBottom: 2,
   },
@@ -392,10 +389,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 18,
+    padding: 12,
     borderRadius: 35,
     gap: 8,
     marginTop: 24,
+    alignSelf: 'center',
+    width: 140
   },
   continueButtonText: {
     color: 'white',

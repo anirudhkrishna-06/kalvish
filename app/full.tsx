@@ -500,16 +500,6 @@ export default function FullTimetableScreen() {
         {/* Controls */}
         <View style={styles.controls}>
           {renderViewModeToggle()}
-          
-          <TouchableOpacity
-            style={styles.toggleAllButton}
-            onPress={toggleAllDays}
-            activeOpacity={0.7}
-          >
-            <Text style={styles.toggleAllText}>
-              {Object.values(expandedDays).every(v => v) ? 'Collapse All' : 'Expand All'}
-            </Text>
-          </TouchableOpacity>
         </View>
 
         {/* Content */}
@@ -522,27 +512,7 @@ export default function FullTimetableScreen() {
           contentContainerStyle={styles.scrollContent}
         >
           {/* Legend */}
-          <View style={styles.legend}>
-            <Text style={styles.legendTitle}>Legend</Text>
-            <View style={styles.legendItems}>
-              <View style={styles.legendItem}>
-                <View style={[styles.legendDot, { backgroundColor: '#3B82F6' }]} />
-                <Text style={styles.legendText}>Course</Text>
-              </View>
-              <View style={styles.legendItem}>
-                <Coffee size={16} color="#6B7280" />
-                <Text style={styles.legendText}>Short Break</Text>
-              </View>
-              <View style={styles.legendItem}>
-                <Utensils size={16} color="#F59E0B" />
-                <Text style={styles.legendText}>Lunch</Text>
-              </View>
-              <View style={styles.legendItem}>
-                <Library size={16} color="#10B981" />
-                <Text style={styles.legendText}>Library</Text>
-              </View>
-            </View>
-          </View>
+          
 
           {/* Timetable Content */}
           <View style={styles.timetableContent}>
@@ -625,7 +595,7 @@ const styles = StyleSheet.create({
   },
   setupButtonText: {
     color: 'white',
-    fontSize: 16,
+    fontSize: 12,
     fontWeight: '600',
   },
   header: {
@@ -645,7 +615,7 @@ const styles = StyleSheet.create({
     marginLeft: 12,
   },
   title: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: '700',
     color: Colors.text,
     marginBottom: 2,
@@ -657,7 +627,7 @@ const styles = StyleSheet.create({
   headerActions: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12,
+    gap: 1,
   },
   actionButton: {
     padding: 8,
@@ -674,16 +644,16 @@ const styles = StyleSheet.create({
   viewModeToggle: {
     flexDirection: 'row',
     backgroundColor: Colors.card,
-    borderRadius: 12,
+    borderRadius: 30,
     padding: 4,
-    gap: 4,
+    gap: 20,
   },
   viewModeButton: {
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 12,
     paddingVertical: 8,
-    borderRadius: 8,
+    borderRadius: 30,
     gap: 6,
   },
   viewModeButtonActive: {
@@ -768,7 +738,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: 20,
+    padding: 10,
     backgroundColor: Colors.background,
   },
   dayHeaderLeft: {
@@ -782,7 +752,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   dayTitle: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: '700',
     color: Colors.text,
   },
@@ -793,7 +763,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   dayStat: {
-    fontSize: 12,
+    fontSize: 8,
     fontWeight: '600',
     color: Colors.muted,
   },
@@ -812,7 +782,7 @@ const styles = StyleSheet.create({
     paddingRight: 12,
   },
   slotTime: {
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: '600',
     color: Colors.text,
     marginBottom: 2,
@@ -870,7 +840,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   slotName: {
-    fontSize: 16,
+    fontSize: 6,
     fontWeight: '600',
     color: Colors.text,
   },
@@ -1005,17 +975,17 @@ const styles = StyleSheet.create({
   },
   gridTimeHeader: {
     width: 80,
-    padding: 12,
+    padding: 5,
   },
   gridDayHeader: {
     flex: 1,
-    padding: 12,
+    padding: 5,
     alignItems: 'center',
     borderLeftWidth: 1,
     borderLeftColor: Colors.border,
   },
   gridDayTitle: {
-    fontSize: 14,
+    fontSize: 8,
     fontWeight: '700',
     color: Colors.text,
   },
@@ -1026,23 +996,23 @@ const styles = StyleSheet.create({
   },
   gridTimeCell: {
     width: 80,
-    padding: 12,
+    padding: 6,
     backgroundColor: Colors.background,
     justifyContent: 'center',
   },
   gridTimeText: {
-    fontSize: 12,
+    fontSize: 10,
     fontWeight: '600',
     color: Colors.text,
     marginBottom: 2,
   },
   gridDurationText: {
-    fontSize: 11,
+    fontSize: 9,
     color: Colors.muted,
   },
   gridCell: {
     flex: 1,
-    padding: 8,
+    padding: 1,
     borderLeftWidth: 1,
     borderLeftColor: Colors.border,
   },
@@ -1060,24 +1030,24 @@ const styles = StyleSheet.create({
     backgroundColor: '#EFF6FF',
   },
   gridBreakText: {
-    fontSize: 12,
+    fontSize: 6,
     color: '#6B7280',
     textAlign: 'center',
   },
   gridCourseDot: {
-    width: 8,
-    height: 8,
+    width: 4,
+    height: 4,
     borderRadius: 4,
     marginBottom: 4,
   },
   gridCourseText: {
-    fontSize: 11,
+    fontSize: 8,
     color: Colors.text,
     textAlign: 'center',
     fontWeight: '600',
   },
   gridOtherText: {
-    fontSize: 11,
+    fontSize: 8,
     color: Colors.muted,
     textAlign: 'center',
   },
@@ -1101,13 +1071,13 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   statValue: {
-    fontSize: 14,
+    fontSize: 10,
     fontWeight: '700',
     color: Colors.text,
     marginBottom: 2,
   },
   statLabel: {
-    fontSize: 12,
+    fontSize: 6,
     color: Colors.muted,
   },
 });

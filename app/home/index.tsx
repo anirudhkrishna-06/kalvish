@@ -287,13 +287,6 @@ export default function TodayTimetableScreen() {
             <Text style={styles.date}>{formatDate(currentTime)}</Text>
             <Text style={styles.title}>Today's Timetable</Text>
           </View>
-          <TouchableOpacity
-            style={styles.headerButton}
-            onPress={handleEditTimetable}
-            activeOpacity={0.7}
-          >
-            <MoreVertical size={24} color={Colors.muted} />
-          </TouchableOpacity>
         </View>
 
         {/* Current Time & Next Up */}
@@ -479,11 +472,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#E0F2FE',
     paddingHorizontal: 16,
     paddingVertical: 12,
-    borderRadius: 16,
+    borderRadius: 26,
     gap: 12,
   },
   timeText: {
-    fontSize: 16,
+    fontSize: 12,
     fontWeight: '600',
     color: '#0369A1',
   },
@@ -494,11 +487,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#D1FAE5',
     paddingHorizontal: 16,
     paddingVertical: 12,
-    borderRadius: 16,
+    borderRadius: 26,
     gap: 12,
   },
   coursesText: {
-    fontSize: 16,
+    fontSize: 12,
     fontWeight: '600',
     color: '#065F46',
   },
@@ -508,7 +501,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FEF3C7',
     marginHorizontal: 24,
     padding: 12,
-    borderRadius: 12,
+    borderRadius: 22,
     marginBottom: 16,
     gap: 12,
   },
@@ -611,7 +604,7 @@ const styles = StyleSheet.create({
   slotCard: {
     flexDirection: 'row',
     backgroundColor: Colors.card,
-    borderRadius: 16,
+    borderRadius: 36,
     padding: 16,
     marginBottom: 12,
     borderWidth: 2,
@@ -637,7 +630,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   slotTime: {
-    fontSize: 15,
+    fontSize: 12,
     fontWeight: '600',
     color: Colors.text,
     marginBottom: 2,
@@ -650,7 +643,7 @@ const styles = StyleSheet.create({
     color: Colors.muted,
   },
   slotDuration: {
-    fontSize: 13,
+    fontSize: 11,
     color: Colors.muted,
   },
   slotDurationPast: {
@@ -708,19 +701,19 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   courseIcon: {
-    width: 36,
-    height: 36,
+    width: 30,
+    height: 30,
     borderRadius: 18,
     alignItems: 'center',
     justifyContent: 'center',
   },
   courseIconText: {
     color: 'white',
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: '700',
   },
   slotName: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: '600',
     color: Colors.text,
   },
@@ -746,7 +739,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.error,
   },
   liveText: {
-    fontSize: 10,
+    fontSize: 8,
     fontWeight: '800',
     color: Colors.error,
     textTransform: 'uppercase',
@@ -755,7 +748,7 @@ const styles = StyleSheet.create({
     opacity: 0.8,
   },
   breakTitle: {
-    fontSize: 16,
+    fontSize: 12,
     fontWeight: '600',
     color: '#6B7280',
     marginBottom: 2,

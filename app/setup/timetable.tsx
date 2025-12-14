@@ -279,9 +279,7 @@ export default function TimetableSetupScreen() {
           
           <View style={styles.headerContent}>
             <Text style={styles.title}>Weekly Timetable</Text>
-            <Text style={styles.subtitle}>
-              Assign courses to each time slot for every day
-            </Text>
+            
           </View>
         </View>
 
@@ -353,35 +351,7 @@ export default function TimetableSetupScreen() {
         </View>
 
         {/* Legend */}
-        <View style={styles.legend}>
-          <Text style={styles.legendTitle}>Legend</Text>
-          <View style={styles.legendItems}>
-            <View style={styles.legendItem}>
-              <View style={[styles.legendIcon, { backgroundColor: '#3B82F6' }]} />
-              <Text style={styles.legendText}>Course</Text>
-            </View>
-            <View style={styles.legendItem}>
-              <View style={[styles.legendIcon, { backgroundColor: '#10B981' }]} />
-              <Text style={styles.legendText}>Library</Text>
-            </View>
-            <View style={styles.legendItem}>
-              <View style={[styles.legendIcon, { backgroundColor: '#8B5CF6' }]} />
-              <Text style={styles.legendText}>Mentor</Text>
-            </View>
-            <View style={styles.legendItem}>
-              <View style={[styles.legendIcon, { backgroundColor: '#9CA3AF' }]} />
-              <Text style={styles.legendText}>Free</Text>
-            </View>
-            <View style={styles.legendItem}>
-              <Coffee size={16} color="#6B7280" />
-              <Text style={styles.legendText}>Short Break</Text>
-            </View>
-            <View style={styles.legendItem}>
-              <Utensils size={16} color="#F59E0B" />
-              <Text style={styles.legendText}>Lunch Break</Text>
-            </View>
-          </View>
-        </View>
+        
 
         {/* Action Buttons */}
         <View style={styles.actions}>
@@ -470,12 +440,12 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   progressTitle: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: '600',
     color: Colors.text,
   },
   progressPercent: {
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: '700',
     color: Colors.primary,
   },
@@ -495,7 +465,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   progressStat: {
-    fontSize: 14,
+    fontSize: 12,
     color: Colors.muted,
   },
   daysScroll: {
@@ -503,13 +473,13 @@ const styles = StyleSheet.create({
   },
   daysContainer: {
     flexDirection: 'row',
-    gap: 8,
+    gap: 4,
   },
   dayTab: {
     paddingHorizontal: 20,
     paddingVertical: 12,
     backgroundColor: Colors.card,
-    borderRadius: 12,
+    borderRadius: 22,
     borderWidth: 1,
     borderColor: Colors.border,
     minWidth: 70,
@@ -543,7 +513,7 @@ const styles = StyleSheet.create({
     gap: 2,
   },
   statText: {
-    fontSize: 12,
+    fontSize: 10,
     color: Colors.muted,
     fontWeight: '600',
   },
@@ -557,7 +527,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: Colors.card,
-    borderRadius: 16,
+    borderRadius: 26,
     padding: 40,
     borderWidth: 1,
     borderColor: Colors.border,
@@ -580,7 +550,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.primary,
     paddingHorizontal: 24,
     paddingVertical: 12,
-    borderRadius: 12,
+    borderRadius: 20,
   },
   fixButtonText: {
     color: 'white',
@@ -638,24 +608,25 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   backButton: {
-    backgroundColor: Colors.card,
+    backgroundColor: '#fff',
     borderWidth: 1,
-    borderColor: Colors.border,
+    borderColor: '#fff',
   },
   backButtonText: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: '600',
     color: Colors.primary,
   },
   saveButton: {
     backgroundColor: Colors.primary,
+    borderRadius: 25
   },
   saveButtonDisabled: {
     opacity: 0.6,
   },
   saveButtonText: {
     color: 'white',
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: '600',
   },
 });

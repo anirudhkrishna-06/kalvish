@@ -301,7 +301,7 @@ export default function IndexScreen() {
                 disabled={!showContent}
               >
                 <Calendar size={20} color={Colors.text} />
-                <Text style={styles.tertiaryButtonText}>View Timetable</Text>
+                <Text style={styles.tertiaryButtonText}>Timetable</Text>
               </TouchableOpacity>
             </Animated.View>
           </Animated.View>
